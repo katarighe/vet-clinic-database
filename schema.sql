@@ -1,7 +1,7 @@
-/* Database schema to keep the structure of entire database. */
-
+/* Create a database named vet_clinic. */
 CREATE DATABASE vet_clinic;
 
+/* Create a table named animals */
 CREATE TABLE animals (  
     id INT GENERATED ALWAYS AS IDENTITY,
     create_time DATE,
