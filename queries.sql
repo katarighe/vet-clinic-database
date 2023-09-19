@@ -26,7 +26,7 @@ SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
 -- Part 2
 
-/*  Set the species column to unspecified */
+/*  Set the species column to unspecified. */
 BEGIN;
 UPDATE animals SET species = 'unspecified' ;
 select name, species from animals;
@@ -41,15 +41,14 @@ SELECT * FROM animals;
 COMMIT;
 SELECT * FROM animals;
 
-/* Delete and rollback the transaction on the animals table */
+/* Delete and rollback the transaction on the animals table. */
 BEGIN;
 DELETE FROM animals;
 SELECT * FROM animals;
 ROLLBACK;
 SELECT * FROM animals;
 
-
-/* Add another transaction inside the table */
+/* Add another transaction inside the table. */
 BEGIN;
 DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 SAVEPOINT my_savepoint;
@@ -60,7 +59,7 @@ UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 SELECT * FROM animals;
 COMMIT;
 
-/* Write queries to answer the following requirements */
+/* Write queries to answer the following requirements. */
 SELECT COUNT(*) FROM animals;
 SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
 SELECT AVG(weight_kg) FROM animals;
