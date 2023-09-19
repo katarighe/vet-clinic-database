@@ -49,7 +49,7 @@ ROLLBACK;
 SELECT * FROM animals;
 
 
-/* Find all animals not named Gabumon. */
+/* Add another transaction inside the table */
 BEGIN;
 DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 SAVEPOINT my_savepoint;
