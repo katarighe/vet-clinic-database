@@ -37,7 +37,7 @@ SELECT * FROM animals;
 COMMIT;
 SELECT * FROM animals;
 
-/* Find all animals not named Gabumon. */
+/* Delete and rollback the transaction on the animals table */
 BEGIN;
 DELETE FROM animals;
 SELECT * FROM animals;
