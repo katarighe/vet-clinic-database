@@ -24,7 +24,7 @@ CREATE TABLE owners (
     age integer
 );
 
-/* Create a table named species */
+/* Make sure that id is set as autoincremented into the PRIMARY KEY */
 CREATE TABLE species (
     id serial PRIMARY KEY,
     name varchar(255)
@@ -34,14 +34,14 @@ CREATE TABLE species (
 ALTER TABLE animals
 ALTER COLUMN id SET DATA TYPE serial;
 
-/* Modify the animals table */
+/* Remove species column inside the table */
 ALTER TABLE animals
 DROP COLUMN species;
 
-/* Modify the animals table */
+/* Add column species_id which is a foreign key referencing species table */
 ALTER TABLE animals
 ADD COLUMN species_id integer REFERENCES species(id);
 
-/* Modify the animals table */
+/* Add column owner_id which is a foreign key referencing the owners table */
 ALTER TABLE animals
 ADD COLUMN owner_id integer REFERENCES owners(id);
