@@ -75,44 +75,45 @@ SELECT species, MIN(weight_kg) AS min_weight, MAX(weight_kg) AS max_weight FROM 
 -- What is the minimum and maximum weight of each type of animal?
 SELECT species, AVG(escape_attempts) AS avg_escape_attempts FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
 
-/* Add the species column of the table */
+/* Write queries to answer the following requirements. */
+-- What animals belong to Melody Pond?
 SELECT animals.name, species.name AS species
 FROM animals
 JOIN species ON animals.species_id = species.id
 JOIN owners ON animals.owner_id = owners.id
 WHERE owners.full_name = 'Melody Pond';
 
-/* Add the species column of the table */
+-- List of all animals that are pokemon (their type is Pokemon).
 SELECT animals.name, species.name AS species
 FROM animals
 JOIN species ON animals.species_id = species.id
 WHERE species.name = 'Pokemon';
 
-/* Add the species column of the table */
+-- List all owners and their animals, remember to include those that don't own any animal.
 SELECT owners.full_name, animals.name AS animal_name
 FROM owners
 LEFT JOIN animals ON owners.id = animals.owner_id;
 
-/* Add the species column of the table */
+-- How many animals are there per species?
 SELECT species.name AS species, COUNT(animals.id) AS animal_count
 FROM species
 LEFT JOIN animals ON species.id = animals.species_id
 GROUP BY species.name;
 
-/* Add the species column of the table */
+-- List all Digimon owned by Jennifer Orwell.
 SELECT animals.name AS digimon_name
 FROM animals
 JOIN species ON animals.species_id = species.id
 JOIN owners ON animals.owner_id = owners.id
 WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon';
 
-/* Add the species column of the table */
+-- List all animals owned by Dean Winchester that haven't tried to escape.
 SELECT animals.name AS animal_name
 FROM animals
 JOIN owners ON animals.owner_id = owners.id
 WHERE owners.full_name = 'Dean Winchester' AND animals.escape_attempts = 0;
 
-/* Add the species column of the table */
+-- Who owns the most animals?
 SELECT owners.full_name, COUNT(animals.id) AS animal_count
 FROM owners
 LEFT JOIN animals ON owners.id = animals.owner_id
