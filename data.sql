@@ -17,7 +17,8 @@ VALUES
     ('Blossom', '1998-10-13', 3, true, 17, NULL),
     ('Ditto', '2022-05-14', 4, true, 22, NULL);
 
-    INSERT INTO owners (full_name, age)
+/* Inserted the data of the folllowing 6 entities */
+INSERT INTO owners (full_name, age)
 VALUES
     ('Sam Smith', 34),
     ('Jennifer Orwell', 19),
@@ -26,6 +27,7 @@ VALUES
     ('Dean Winchester', 14),
     ('Jodie Whittaker', 38);
 
+/* Inserted the data into the species table */
 INSERT INTO species (name)
 VALUES
     ('Pokemon'),
@@ -38,27 +40,32 @@ SET species_id = CASE
     ELSE (SELECT id FROM species WHERE name = 'Pokemon')
 END;
 
-/* Add the species column of the table */
+/* Modify the inserted animals to include owner information */
+-- Sam Smith owns Agumon.
 UPDATE animals
 SET owner_id = owners.id
 FROM owners
 WHERE animals.name = 'Agumon' AND owners.full_name = 'Sam Smith';
 
+-- Jennifer Orwell owns Gabumon and Pikachu.
 UPDATE animals
 SET owner_id = owners.id
 FROM owners
 WHERE animals.name IN ('Gabumon', 'Pikachu') AND owners.full_name = 'Jennifer Orwell';
 
+-- Bob owns Devimon and Plantmon.
 UPDATE animals
 SET owner_id = owners.id
 FROM owners
 WHERE animals.name IN ('Devimon', 'Plantmon') AND owners.full_name = 'Bob';
 
+-- Melody Pond owns Charmander, Squirtle, and Blossom.
 UPDATE animals
 SET owner_id = owners.id
 FROM owners
 WHERE animals.name IN ('Charmander', 'Squirtle', 'Blossom') AND owners.full_name = 'Melody Pond';
 
+-- Dean Winchester owns Angemon and Boarmon.
 UPDATE animals
 SET owner_id = owners.id
 FROM owners
