@@ -16,3 +16,32 @@ CREATE TABLE animals (
 /* Add the species column of the table */
 ALTER TABLE animals
 ADD COLUMN species VARCHAR(255);
+
+/* Add the species column of the table */
+CREATE TABLE owners (
+    id serial PRIMARY KEY,
+    full_name varchar(255),
+    age integer
+);
+
+/* Add the species column of the table */
+CREATE TABLE species (
+    id serial PRIMARY KEY,
+    name varchar(255)
+);
+
+/* Add the species column of the table */
+ALTER TABLE animals
+ALTER COLUMN id SET DATA TYPE serial;
+
+/* Add the species column of the table */
+ALTER TABLE animals
+DROP COLUMN species;
+
+/* Add the species column of the table */
+ALTER TABLE animals
+ADD COLUMN species_id integer REFERENCES species(id);
+
+/* Add the species column of the table */
+ALTER TABLE animals
+ADD COLUMN owner_id integer REFERENCES owners(id);
