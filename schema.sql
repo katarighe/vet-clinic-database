@@ -24,13 +24,7 @@ CREATE TABLE owners (
     age integer
 );
 
-/* Create a table named species */
-CREATE TABLE species (
-    id serial PRIMARY KEY,
-    name varchar(255)
-);
-
-/* Make sure that id is set as autoincremented into the PRIMARY KEY */
+/* Create a table named species and make sure that id is set as autoincremented into the PRIMARY KEY */
 CREATE TABLE species (
     id serial PRIMARY KEY,
     name varchar(255)
