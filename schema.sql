@@ -54,14 +54,14 @@ CREATE TABLE vets (
     date_of_graduation date
 );
 
-/* Create a "join table" called specializations to handle this relationship. */
+/* Create a "join table" called specializations to handle this relationship */
 CREATE TABLE specializations (
     id serial PRIMARY KEY,
     vet_id integer REFERENCES vets(id),
     species_id integer REFERENCES species(id)
 );
 
-/*  Create a "join table" called visits to handle this relationship, it should also keep track of the date of the visit. */
+/*  Create a "join table" called visits to handle this relationship, it should also keep track of the date of the visit */
 CREATE TABLE visits (
     id serial PRIMARY KEY,
     animal_id integer REFERENCES animals(id),
