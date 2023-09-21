@@ -1,4 +1,4 @@
-/* Inserted the data of the folllowing 4 animals */
+/* Inserted the data of the following 4 animals */
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
 VALUES
     ('Agumon', '2020-02-03', 0, true, 10.23),
@@ -6,7 +6,7 @@ VALUES
     ('Pikachu', '2021-01-07', 1, false, 15.04),
     ('Devimon', '2017-05-12', 5, true, 11);
 
-/* Inserted the data of the folllowing 6 animals */
+/* Inserted the data of the following 6 animals */
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg, species)
 VALUES
     ('Charmander', '2020-02-08', 0, false, -11, NULL),
@@ -17,7 +17,7 @@ VALUES
     ('Blossom', '1998-10-13', 3, true, 17, NULL),
     ('Ditto', '2022-05-14', 4, true, 22, NULL);
 
-/* Inserted the data of the folllowing 6 entities */
+/* Inserted the data of the following 6 entities */
 INSERT INTO owners (full_name, age)
 VALUES
     ('Sam Smith', 34),
@@ -71,7 +71,7 @@ SET owner_id = owners.id
 FROM owners
 WHERE animals.name IN ('Angemon', 'Boarmon') AND owners.full_name = 'Dean Winchester';
 
-/* Inserted the data of the folllowing 4 vets */
+/* Inserted the data of the following 4 vets */
 INSERT INTO vets (name, age, date_of_graduation)
 VALUES
     ('William Tatcher', 45, '2000-04-23'),
@@ -79,7 +79,7 @@ VALUES
     ('Stephanie Mendez', 64, '1981-05-04'),
     ('Jack Harkness', 38, '2008-06-08');
 
-/* Inserted the data of the folllowing 4 specializations */
+/* Inserted the data of the following 4 specializations */
 INSERT INTO specializations (vet_id, species_id)
 VALUES
     ((SELECT id FROM vets WHERE name = 'William Tatcher'), (SELECT id FROM species WHERE name = 'Pokemon')),
@@ -87,7 +87,7 @@ VALUES
     ((SELECT id FROM vets WHERE name = 'Stephanie Mendez'), (SELECT id FROM species WHERE name = 'Pokemon')),
     ((SELECT id FROM vets WHERE name = 'Jack Harkness'), (SELECT id FROM species WHERE name = 'Digimon'));
 
-/* Inserted the data of the folllowing 20 visits */
+/* Inserted the data of the following 20 visits */
 INSERT INTO visits (animal_id, vet_id, visit_date)
 VALUES
     ((SELECT id FROM animals WHERE name = 'Agumon'), (SELECT id FROM vets WHERE name = 'William Tatcher'), '2020-05-24'),
