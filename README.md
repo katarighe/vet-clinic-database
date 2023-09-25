@@ -7,13 +7,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Install](#install)
-  - [Run tests](#run-tests)
-  - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -25,20 +19,29 @@
 
 # 📖 Vet Clinic Database <a name="about-project"></a>
 
-**Vet Clinic Database** is a single-page application (SPA) built with React that uses real-time data from the Vet Clinic Database. Users can book rockets and join selected animals, and the selected services are displayed on the user's profile page.
-
-The project is built with various programming tools such as React, JSX, CSS, and JavaScript. It is also deployed on Netifly, so you can try it out by visiting the live demo.
+The **Vet Clinic Database** is a simple database that stores information about the animals in the vet.
 
 ## 🛠 Built With <a name="built-with"></a>
-* React
-* JSX
-* CSS
-* Javascript ES6
-* Visual Studio Code
-* Jest
-* React Testing Library
-* ESLint
-* Stylelint
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://expressjs.com/">Express.js</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
 <!-- Features -->
 
@@ -46,75 +49,24 @@ The project is built with various programming tools such as React, JSX, CSS, and
 
 > The three key features of this project include the following.
 
-- **Book Vet Clinic Database, cancel the previously made booking.**
-- **Join Vet Clinic Database, leave the mission the user he/she has joined earlier.**
-- **View all Vet Clinic Databases.**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- Live Demo of the Project: 
+- ***Query and update the animals table.**
+- **Query multiple tables.**
+- **Add "join table" for vists.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-Get ready to explore Vet Clinic Databaseb with these steps:
+Get ready to explore Vet Clinic Database with these steps:
 
-### Prerequisites <a name="prerequisites"></a>
+This repository includes files with plain SQL that can be used to recreate a database:
 
-Ensure you have:
- - A Web Browser such as Microsoft Edge or Google Chrome 🌐
- - Git 🐙
- - A code editor such as Visual Studio Code 👨‍💻
+- Use [schema.sql](./schema.sql) to create all tables.
+- Use [data.sql](./data.sql) to populate tables with sample data.
+- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. 
 
-### Setup <a name="setup"></a>
-
-Use `git clone` to get your local copy of the project.
-
-```bash
-git clone https://github.com/katarighe/vet-clinic-database.git
-```
-
-### Install <a name="install"></a>
-
- Run `npm install` to set up the required packages.
-
-```bash
-npm install
-```
-
-### Run Tests <a name="run-tests"></a>
-To run tests run the following command in your terminal
-```
- npm test
-```
-
-Currently, there are no test scripts available, but the libraries (React Testing Library and Jest) are set up.
-
-You can also check linter errors by running this commands:
-
-```
-npx stylelint "**/*.{css,scss}"
-```
-
-```
-npx eslint "**/*.{js,jsx}"
-```
-
-### Usage <a name="usage"></a>
-
-Launch the app with the following command
-
-```
-  npm start
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+**Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
 <!-- AUTHORS -->
 
