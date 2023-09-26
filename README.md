@@ -68,6 +68,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
+**Schema Diagram**
+![drawSQL-vet-clinic-export-2023-09-26](https://github.com/katarighe/vet-clinic-database/assets/80690364/4d2cf7f8-0f65-4594-ad59-75091c050f20)
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
